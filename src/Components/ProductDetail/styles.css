@@ -3,3 +3,9 @@
   height: calc(100vh - 68px);
   top: 68px;
 }
+
+.product-detail-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
