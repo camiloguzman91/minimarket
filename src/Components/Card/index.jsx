@@ -9,10 +9,13 @@ const Card = (data) => {
     context.setProductToShow(productDetail)
   }
 
-
   const justOnClick = (event) =>{
     event.stopPropagation();
     context.setCount(context.count + 1);
+  }
+
+  const addProductsToCart = (productData) => {
+    context.setCartProducts([...context.cartProducts, productData])
   }
 
   return (
@@ -25,7 +28,7 @@ const Card = (data) => {
         <button 
           className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1' 
           onClick={justOnClick}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"   className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"   className="w-6 h-6" onClick={() => addProductsToCart(data.data)}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
           </svg>
         </button>
