@@ -7,7 +7,7 @@ const CheckOutSideMenu = () => {
   const context = useContext(ShoppingCartContext)
   return (
     <aside 
-      className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} checkout-side-menu flex-col fixed right-0 border border-black rounded-lg bg-white scrollable-cards`}>
+      className={`${context.isCheckoutSideMenuOpen ? 'flex' : 'hidden'} checkout-side-menu flex-col fixed right-0 border border-black rounded-lg bg-white`}>
       
       <div className='flex flex-col p-6'>
         <div className='checkout-title-menu'>
@@ -19,7 +19,7 @@ const CheckOutSideMenu = () => {
           </button>
         </div>
       </div>
-      <div className='px-6'>
+      <div className='px-6 overflow-y-scroll'>
         {
           context.cartProducts.map(product => (
             <OrderCard 
