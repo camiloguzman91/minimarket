@@ -12,18 +12,18 @@ import './App.css'
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: '/', element: <Home /> },
-    { path: '/electronics', element: <Home /> },
-    { path: '/jewelery', element: <Home /> },
-    { path: "/men's clothing", element: <Home /> },
-    { path: "/women's clothing", element: <Home /> },
-    { path: '/my-account', element: <MyAccount /> },
-    { path: '/my-order', element: <MyOrder /> },
-    { path: '/my-orders', element: <MyOrders /> },
-    { path: '/my-orders/last', element: <MyOrder /> },
-    { path: '/my-orders/:id', element: <MyOrder /> },
-    { path: '/sign-in', element: <SignIn /> },
-    { path: '/*', element: <NotFound /> },
+    { path: '/minimarket/', element: <Home /> },
+    { path: '/minimarket/electronics', element: <Home /> },
+    { path: '/minimarket/jewelery', element: <Home /> },
+    { path: "/minimarket/men's clothing", element: <Home /> },
+    { path: "/minimarket/women's clothing", element: <Home /> },
+    { path: '/minimarket/my-account', element: <MyAccount /> },
+    { path: '/minimarket/my-order', element: <MyOrder /> },
+    { path: '/minimarket/my-orders', element: <MyOrders /> },
+    { path: '/minimarket/my-orders/last', element: <MyOrder /> },
+    { path: '/minimarket/my-orders/:id', element: <MyOrder /> },
+    { path: '/minimarket/sign-in', element: <SignIn /> },
+    { path: '/minimarket/*', element: <NotFound /> },
   ])
 
   return routes
